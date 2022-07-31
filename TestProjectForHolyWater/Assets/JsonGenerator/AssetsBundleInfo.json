@@ -1,0 +1,11 @@
+{
+    "Pack": [
+        {
+            "AssetBundleName": "level1",
+            "version": 2,
+            "AssetBundleURL": "https://drive.google.com/uc?export=download&id=1bEvz8eQ64npLXv4pTXq3PfAqOd31Wso4",
+            "ManifestURL": "https://drive.google.com/uc?export=download&id=1h-o1PyTIuOY8aTDhEhfgIa_5JOrd8ejY",
+            "AssetBundleLocalPath": "AssetBundlesData/Levels/"
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+ManifestFileVersion: 0
+CRC: 1139483967
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 01e46ba448e6b1607164ec545cb03be3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: d7f54a7fecd37ea3cb044db0579f49ba
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 76d673b514187f74cac13b273ad690ad, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7c0703c713f7ed4419485aca40b125ab, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 51a0684f7ff38e44594f6f5b86b327b5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b4507a18d2d457d4d848b6ea364680bd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6f05f59459cf8de4797e197dacd113b1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ca40cf7d9cc4a8c48b0fd9c014bb3443, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a00264b8eeabdc64eab1629f7f77345a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 830b63a1d98af104abd5361fc04e20b7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 34c4083c9fffc4e4cbf6ea23917351eb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3dbc4ec568c7ce640b0450614d68442d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fcebbc33ba773a746a8734c4aa6a30eb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6eef8232159d3cc46a781427c63b048f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 10411a3e24be9cd48a88a9cce7d1e5bb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ab2d386e0b7fd7b45bdac53b429180bd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1d459c9501012ce46850ef448524d047, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a7cdbd8595f48b349965465017f44f78, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/LevelsContent/Resources/Level1/0 Directional Light.prefab
+- Assets/LevelsContent/Resources/Level1/2 LevelObjects.prefab
+- Assets/LevelsContent/LevelObjects/Prefabs/Ground.prefab
+- Assets/LevelsContent/Resources/Level1/9 CoinsSpawner.prefab
+- Assets/LevelsContent/Resources/Level1/3 PlayerStartPoint.prefab
+- Assets/LevelsContent/Resources/Level1/8 GameCanvas.prefab
+- Assets/LevelsContent/Resources/Level1/4 SceneMusicPlay.prefab
+- Assets/LevelsContent/Resources/Level1/1 Main Camera.prefab
+Dependencies: []
