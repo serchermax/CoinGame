@@ -15,11 +15,11 @@ public class JsonCheckOperation
         try
         {
             jsonPack = JsonUtility.FromJson<JsonPack>(File.ReadAllText(jsonPath));
-            Debug.Log("Json файл найден!");
+            Debug.Log("Json пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!");
         }
         catch
         {
-            Debug.Log("Json файл не найден!");
+            Debug.Log("Json пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!");
             jsonPack = null;
         }
         return jsonPack;
@@ -27,7 +27,7 @@ public class JsonCheckOperation
 
     public async Task<JsonPack> DonwloadNewJson()
     {
-        JsonPack jsonPack;
+        JsonPack jsonPack = null;
         string jsonPath = Application.persistentDataPath + "/" + "Temp" + JsonManager.JSON_FILE_NAME;
 
         Task<bool> downloadTask = DownloadOperaion.Download(JSON_FILE_URL, jsonPath);
@@ -37,7 +37,6 @@ public class JsonCheckOperation
         {
             jsonPack = JsonUtility.FromJson<JsonPack>(File.ReadAllText(jsonPath));
         }
-        else jsonPack = null;
 
         return jsonPack;
     }
