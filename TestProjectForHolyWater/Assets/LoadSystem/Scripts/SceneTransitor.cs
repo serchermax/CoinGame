@@ -19,19 +19,19 @@ public class SceneTransitor : MonoBehaviour
     [SerializeField] private Text _message;
     [SerializeField] private float _waitingTimeForError = 4f;
     [SerializeField] private float _waitingTimeForOfflineMode = 2f;
-    
+
     [Inject] private DiContainer diContainer;
-        
+
     private bool _offlineMode = false;
     private int _defaultCortingLayer;
-    private string _nextSceneName;    
+    private string _nextSceneName;
     private JsonCheckOperation _jsonCheckOperation;
     private AssetBundlesOperations _assetBundlesOperations;
 
     private void Awake()
     {
         Debug.Log(Application.persistentDataPath);
-        canvas = GetComponent<Canvas>();       
+        canvas = GetComponent<Canvas>();
 
         _jsonCheckOperation = new JsonCheckOperation();
         _assetBundlesOperations = new AssetBundlesOperations();
@@ -51,14 +51,17 @@ public class SceneTransitor : MonoBehaviour
         if (_nextSceneName == MAIN_MENU_NAME)
         {
             canvas.sortingOrder = 999;
-            LoadScene();            
+            LoadScene();
+            return;
         }
-        else
-        {
-            canvas.sortingOrder = _defaultCortingLayer;
-            if (_offlineMode) LoadScene();
-            else LoadNextScene();
+
+        canvas.sortingOrder = _defaultCortingLayer;
+        if (_offlineMode) {
+            LoadScene();
+            return;
         }
+
+        LoadNextScene();
     }
 
     private async void LoadNextScene()
@@ -75,18 +78,28 @@ public class SceneTransitor : MonoBehaviour
         {
             _jsonCheckOperation.ChangeJsonFile(jsonPackNew);
             CompareVersionsCheckFiles(jsonPackOld, jsonPackNew);
+            return;
         }
-        else if (jsonPackOld == null && jsonPackNew != null)    // Download all bundles from new JSON.
+
+        if (jsonPackOld == null && jsonPackNew != null)    // Download all bundles from new JSON.
         {
             _jsonCheckOperation.ChangeJsonFile(jsonPackNew);
             DownloadAssetBundles(jsonPackNew.Pack);
+            return;
         }
-        else if (jsonPackOld != null && jsonPackNew == null)    // Find bad files. If can, switch on offline mode.   
+
+        if (jsonPackOld != null && jsonPackNew == null)    // Find bad files. If can, switch on offline mode.
         {
-            if (_assetBundlesOperations.FindBadPacks(jsonPackOld)) Error();
-            else OfflineMode();
+            if (_assetBundlesOperations.FindBadPacks(jsonPackOld)) {
+                Error();
+                return;
+            }
+
+            OfflineMode();
+            return;
         }
-        else Error();                                           // No local, no new( Switch on internet, or nikakoy igri.     
+
+        Error();                                           // No local, no new( Switch on internet, or nikakoy igri.
     }
 
     private void CompareVersionsCheckFiles(JsonPack jsonPackOld, JsonPack jsonPackNew)
@@ -95,7 +108,7 @@ public class SceneTransitor : MonoBehaviour
         packForDownload = _assetBundlesOperations.FindBadPacks(jsonPackNew, packForDownload);
 
         if (packForDownload == null) LoadScene();
-        else DownloadAssetBundles(packForDownload);    
+        else DownloadAssetBundles(packForDownload);
     }
 
     private async void DownloadAssetBundles(List<AssetBundleJsonInfo> pack)
@@ -143,6 +156,6 @@ public class SceneTransitor : MonoBehaviour
 
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(_nextSceneName));
 
-        OnEndSceneTransite?.Invoke();       
+        OnEndSceneTransite?.Invoke();
     }
 }
